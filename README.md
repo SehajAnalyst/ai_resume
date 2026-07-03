@@ -1,35 +1,42 @@
 # CareerFit AI 🎯
 ### Resume Score Prediction & Skill Gap Analysis System
 
-A machine-learning powered resume evaluation tool built with Python, Streamlit, and scikit-learn.
+CareerFit AI is a machine learning-based web application that helps users evaluate their resumes by analyzing skills, identifying missing competencies, and providing personalized improvement suggestions.
+
+The goal of this project is to give job seekers a better understanding of how well their resumes align with different career roles and what areas they can improve.
 
 ---
 
 ## Features
-- Upload PDF resume → instant analysis
-- Skill extraction from resume text (40+ skills)
-- Role-specific skill gap detection (7 job roles)
-- Multi-component resume scoring (out of 100)
-- Random Forest ML model predicts resume category
-- Personalized improvement suggestions
-- Interactive charts: gauge, bar breakdown, pie chart
+
+- Upload a PDF resume and get instant analysis.
+- Extract and identify 40+ technical and soft skills.
+- Detect skill gaps for different job roles.
+- Generate a resume score out of 100 based on multiple factors.
+- Predict resume categories using a Random Forest model.
+- Provide personalized recommendations for improvement.
+- Display interactive charts and visual insights.
 
 ---
 
-## Setup & Run
+## Setup and Installation
 
-### 1. Install dependencies
+### Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. (Optional) Pre-train the ML model
+### (Optional) Train the machine learning model
+
 ```bash
 python train_model.py
 ```
-> The model auto-trains on first Streamlit run if not pre-trained.
 
-### 3. Run the application
+> The model automatically trains itself on the first run if a saved model is not available.
+
+### Run the application
+
 ```bash
 streamlit run app.py
 ```
@@ -37,44 +44,48 @@ streamlit run app.py
 ---
 
 ## Project Structure
-```
+
+```text
 careerfit_ai/
-├── app.py                      # Streamlit web application
-├── core.py                     # Skills, scoring logic, ML model
-├── pdf_extractor.py            # PDF text extraction
-├── visualizations.py           # Plotly charts
-├── train_model.py              # Standalone model training
-├── requirements.txt            # Dependencies
-├── rf_model.pkl                # Saved ML model (after training)
-├── label_encoder.pkl           # Saved label encoder (after training)
-├── synthetic_resume_dataset.csv # Generated training data
-└── PROJECT_REPORT.md           # Full project report
+├── app.py
+├── core.py
+├── pdf_extractor.py
+├── visualizations.py
+├── train_model.py
+├── requirements.txt
+├── rf_model.pkl
+├── label_encoder.pkl
+├── synthetic_resume_dataset.csv
+└── PROJECT_REPORT.md
 ```
 
 ---
 
-## Scoring System
-| Component    | Max Score |
-|-------------|-----------|
-| Skill Match | 40        |
-| Projects    | 20        |
-| Experience  | 15        |
-| Education   | 10        |
-| Keywords    | 10        |
-| Formatting  | 5         |
-| **Total**   | **100**   |
+## Resume Scoring System
 
-## Categories
-| Score | Category  |
-|-------|-----------|
-| 0–40  | Weak      |
-| 41–70 | Average   |
-| 71–85 | Good      |
-| 86–100| Excellent |
+| Component | Maximum Score |
+|-----------|---------------|
+| Skill Match | 40 |
+| Projects | 20 |
+| Experience | 15 |
+| Education | 10 |
+| Keywords | 10 |
+| Formatting | 5 |
+| **Total** | **100** |
+
+### Score Categories
+
+| Score Range | Category |
+|-------------|----------|
+| 0 – 40 | Weak |
+| 41 – 70 | Average |
+| 71 – 85 | Good |
+| 86 – 100 | Excellent |
 
 ---
 
 ## Supported Job Roles
+
 - Data Analyst
 - Data Scientist
 - Machine Learning Engineer
@@ -85,9 +96,43 @@ careerfit_ai/
 
 ---
 
-## Technologies
-Python · Streamlit · scikit-learn · Pandas · NumPy · Plotly · pdfplumber · Regex
+## Technologies Used
+
+- Python
+- Streamlit
+- Scikit-learn
+- Pandas
+- NumPy
+- Plotly
+- pdfplumber
+- Regular Expressions (Regex)
 
 ---
 
-Built as a Final Year Machine Learning Project.
+## What I Learned
+
+Building this project helped me gain hands-on experience in:
+
+- Machine Learning model development
+- Feature engineering and resume scoring techniques
+- PDF text extraction and preprocessing
+- Building interactive web applications using Streamlit
+- Data visualization and user-centric design
+
+---
+
+## Future Improvements
+
+- Resume and Job Description matching
+- ATS score prediction
+- AI-generated resume recommendations
+- Interview question generation
+- Multi-language resume support
+
+---
+
+## Author
+
+**Sehaj Oberoi**
+
+GitHub: https://github.com/SehajAnalyst
