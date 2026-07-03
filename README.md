@@ -1,6 +1,10 @@
 # CareerFit AI 🎯
 ### Resume Score Prediction & Skill Gap Analysis System
 
+## 🚀 Live Demo
+👉 https://fitcareer-ai.streamlit.app/
+
+A machine-learning powered resume evaluation tool built with Python, Streamlit, and scikit-learn.
 CareerFit AI is a machine learning-based web application that helps users evaluate their resumes by analyzing skills, identifying missing competencies, and providing personalized improvement suggestions.
 
 The goal of this project is to give job seekers a better understanding of how well their resumes align with different career roles and what areas they can improve.
